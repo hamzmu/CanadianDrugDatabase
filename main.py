@@ -1,17 +1,14 @@
-from datetime import time
 from DataAccess import url_builder, json_response, stats
-from UserInterface import get_code, exit_program
 
 
 
 # Test ID, 48905
 id = input("Enter Drug Identification Number (DIN): ")
 
-codes = ["DIF", "CIF", "AIN", "DFM", "PTY", "PST", "ROA", "DSC", "DST", "TCL"]
+codes = ["DIF", "AIN", "DFM", "PTY", "PST", "ROA", "DSC", "DST", "TCL"]
 
 code_dict_title = {
     "DIF": "Drug Product Information",
-    "CIF": "Company Information",
     "AIN": "Active Ingredients",
     "DFM": "Dosage Form",
     "PTY": "Packaging Information",
@@ -34,7 +31,8 @@ for element in codes:
             print(f"{key}: {value}")
         print("\n")
     else:
-        print("*** Error: Code Not Found/Applicable ***")
+        print("*** Error: Code Not Found/Applicable ***" + "\n" + "\n")
+
 
 
 

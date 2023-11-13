@@ -4,7 +4,6 @@ import requests
 def url_builder(code: str, id: str) -> str:
     code_dict = {
         "DIF": "drugproduct",
-        "CIF": "company",
         "AIN": "activeingredient",
         "DFM": "form",
         "PTY": "packaging",
