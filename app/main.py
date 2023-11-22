@@ -1,7 +1,5 @@
 from DataAccess import url_builder, json_response, stats
 
-
-
 # Test ID, 48905
 id = input("Enter Drug Identification Number (DIN): ")
 
@@ -19,6 +17,7 @@ code_dict_title = {
     "TCL": "Therapeutic Class"
 }
 
+
 for element in codes:
     print(code_dict_title[element] + "\n")
     url = url_builder(element, id)
@@ -32,16 +31,3 @@ for element in codes:
         print("\n")
     else:
         print("*** Error: Code Not Found/Applicable ***" + "\n" + "\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
